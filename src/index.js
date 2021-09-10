@@ -43,6 +43,7 @@ $(document).ready(function() {
     CurrencyService.getCurrency()
       .then(function (response) {
         getElements(response);
+        $('.card').show();
       }).catch(function() {
         $('.showErrors').text(`There was an error fethcing informatin from the API.`);
       });

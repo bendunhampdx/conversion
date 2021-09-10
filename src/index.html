@@ -8,9 +8,12 @@
 <body>
   <div class="container">
     <h1>Currency Conversion</h1>
-    <label for="dollar">Enter a dollar amount:</label>
-    <input id="dollar" type="number">
-    <select id="country" class="form-select" aria-label="Default select example">
+    <div class="row">
+      <label for="dollar">Enter a dollar amount:</label>
+      <input id="dollar" type="number">
+    </div>
+  <div class="row">
+    <select class="form-select" id="country" aria-label="Default select example">
       <option selected>Choose a currency to convert to</option>
       <option value="United Emirates">United Emirates Dirham (AED)</option>
       <option value="Afghanistan">Afgan Afghani (AFN)</option>
@@ -19,9 +22,14 @@
       <option value="Netherlands">Netherlands Antillean Guilder (ANG)</option>
       <option value="Puddleland">Puddleland (PUD)</option>
     </select>
+  </div>
+  <div class="row">
     <button class="btn-success" id="convert">GET YOUR CONVERSION</button>
+  </div>
+  <div class="card">
     <div class="output"></div>
     <div class="showErrors"></div>
+  </div>
   </div>
 </body>
 </html>
