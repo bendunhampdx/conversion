@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "/repo-name-here/"
+    // publicPath: "/repo-name-here/"
   },
   devtool: 'eval-source-map',
   devServer: {               

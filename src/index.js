@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyService from './currency.js';
 
+
+
 function getElements(response) {
   let country = $('#country').val();
 
@@ -17,19 +19,19 @@ function getElements(response) {
   }
   else if (country === 'Afghanistan') {
     let AFNConversion = $('#dollar').val() * response.conversion_rates.AFN;
-    $('.output').html(`The conversion in AFN is ${AFNConversion}`)
+    $('.output').html(`The conversion in AFN is ${AFNConversion}`);
   }
   else if (country === 'Albania') {
     let ALLConversion = $('#dollar').val() * response.conversion_rates.ALL;
-    $('.output').html(`The conversion in ALL is ${ALLConversion}`)
+    $('.output').html(`The conversion in ALL is ${ALLConversion}`);
   }
   else if (country === 'Armenia') {
     let AMDConversion = $('#dollar').val() * response.conversion_rates.AMD;
-    $('.output').html(`The conversion in AMD is ${AMDConversion}`)
+    $('.output').html(`The conversion in AMD is ${AMDConversion}`);
   }
   else if (country === 'Netherlands') {
     let ANGConversion = $('#dollar').val() * response.conversion_rates.ANG;
-    $('.output').html(`The conversion in ANG is ${ANGConversion}`)
+    $('.output').html(`The conversion in ANG is ${ANGConversion}`);
   }
   else {
     $('.showErrors').text(`There was an error: ${response.message}`);
