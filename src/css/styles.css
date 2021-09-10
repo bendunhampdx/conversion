@@ -19,3 +19,15 @@
 h1 {
   text-align: center;
 }
+
+.row {
+  margin-bottom: 18px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#dollar {
+  margin-left: 8px;
+}

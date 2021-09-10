@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyService from './currency.js';
 
-
-
 function getElements(response) {
   let country = $('#country').val();
 
