@@ -9,11 +9,15 @@ function getElements(response) {
 
   if (response.result !== "success") {
     const errorTypeIfExists = (response && response['error-type']) ? response['error-type'] : null;
-    $('.showErrors').html(`There was an error and the type was ${errorTypeIfExists}!`)
+    $('.showErrors').html(`There was an error and the type was ${errorTypeIfExists}!`);
   }
   else if (country === 'United Emirates') {
     let AEDConversion = $('#dollar').val() * response.conversion_rates.AED;
     $('.output').html(`The conversion in AED is ${AEDConversion}`);
+  }
+  else if (country === 'Afghanistan') {
+    let AFNConversion = $('#dollar').val() * response.conversion_rates.AFN;
+    $('.output').html(`The conversion in AFN is ${AFNConversion}`)
   }
   else {
     $('.showErrors').text(`There was an error: ${response.message}`);
@@ -23,10 +27,10 @@ function getElements(response) {
 $(document).ready(function() {
   $('#convert').click(function() {
     CurrencyService.getCurrency()
-    .then(function (response) {
-      getElements(response);
-    }).catch(function() {
-      $('.showErrors').text(`There was an error fethcing informatin from the API.`)
-    });
+      .then(function (response) {
+        getElements(response);
+      }).catch(function() {
+        $('.showErrors').text(`There was an error fethcing informatin from the API.`);
+      });
   });
 });
