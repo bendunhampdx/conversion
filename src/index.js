@@ -19,6 +19,18 @@ function getElements(response) {
     let AFNConversion = $('#dollar').val() * response.conversion_rates.AFN;
     $('.output').html(`The conversion in AFN is ${AFNConversion}`)
   }
+  else if (country === 'Albania') {
+    let ALLConversion = $('#dollar').val() * response.conversion_rates.ALL;
+    $('.output').html(`The conversion in ALL is ${ALLConversion}`)
+  }
+  else if (country === 'Armenia') {
+    let AMDConversion = $('#dollar').val() * response.conversion_rates.AMD;
+    $('.output').html(`The conversion in AMD is ${AMDConversion}`)
+  }
+  else if (country === 'Netherlands') {
+    let ANGConversion = $('#dollar').val() * response.conversion_rates.ANG;
+    $('.output').html(`The conversion in ANG is ${ANGConversion}`)
+  }
   else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   }
